@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "974261142931",
+    "project_id": "diyet-oneri",
+    "storage_bucket": "diyet-oneri.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974261142931:android:6c1e6279922ddb67109466",
+        "android_client_info": {
+          "package_name": "com.buserkapkiner.diyetonerim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974261142931-g36kl8841aav0mdef07n7unjijh25iur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYJANYWhVzHjNQr6crOcPjpOshc4wyGAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974261142931-g36kl8841aav0mdef07n7unjijh25iur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

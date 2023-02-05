@@ -15,13 +15,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /*binding.login.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             intent = Intent(applicationContext, BodyMossIndexActivity::class.java)
             startActivity(intent)
         }
-        binding.save.setOnClickListener {
+        binding.btnRegister.setOnClickListener {
             intent = Intent(applicationContext, RegisterActivity::class.java)
             startActivity(intent)
-        }*/
+        }
     }
 }

@@ -6,9 +6,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.buserkapkiner.diyetonerim.databinding.ActivityRegisterBinding
 import com.buserkapkiner.diyetonerim.ui.login.MainActivity
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
-
+    // Initialize Firebase Auth
+    val auth = Firebase.auth
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -18,21 +21,40 @@ class RegisterActivity : AppCompatActivity() {
 
             var userName = binding.edtTxtCreateUserName.text.toString()
             var userPassword = binding.edtTxtCreatePassword.text.toString()
-            var SharedPreferences = this.getSharedPreferences("Bilgiler", MODE_PRIVATE)
-            var editor = SharedPreferences.edit()
-            //veri ekleme
-            editor.putString("kullanıcı", "$userName").apply()
-            editor.putString("kullanıcı", "$userPassword").apply()
-            Toast.makeText(applicationContext, "Kayıt Başarılı", Toast.LENGTH_LONG).show()
+            createAccount(email = userName, password = userPassword)
             binding.edtTxtCreateUserName.text.clear()
             binding.edtTxtCreatePassword.text.clear()
+
         }
+
 
         binding.btnBackToMain.setOnClickListener {
             intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
         }
 
+
+    }
+
+    fun createAccount(email: String, password: String) {
+        // Initialize Firebase Auth
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+
+                    Toast.makeText(applicationContext, "Kayıt Başarılı", Toast.LENGTH_LONG).show()
+
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                }
+            }
 
     }
 }

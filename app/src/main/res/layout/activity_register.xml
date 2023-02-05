@@ -53,6 +53,7 @@
         android:ems="10"
         android:hint=" Kullanıcı Adı Oluşturun"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         android:padding="10dp"
         android:textAlignment="gravity"
         android:textColorHint="@color/black"
