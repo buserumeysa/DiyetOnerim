@@ -14,10 +14,12 @@
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/drawable/logo.xml" value="0.123" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout-land/activity_main.xml" value="0.2869791666666667" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout/activity_bki.xml" value="0.20416666666666666" />
+        <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout/activity_body_moss_index.xml" value="0.2" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout/activity_diyet.xml" value="0.25" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout/activity_hosgeldiniz.xml" value="0.39444444444444443" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout/activity_kayit.xml" value="0.2" />
-        <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/applications/DiyetOnerim/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/mipmap-anydpi-v26/ikon1.xml" value="0.1" />
       </map>
     </option>

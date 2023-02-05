@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -9,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/constraintcolor"
-    tools:context=".MainActivity">
+    tools:context=".ui.login.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,7 +16,7 @@
         android:text="BEDEN KİTLE İNDEKSİ HESAPLAMA"
         android:gravity="center"
         style="@android:style/TextAppearance.Material.Headline"
-        android:padding="30dp"/>
+        android:padding="30dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,19 +29,19 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="BOY"
-            style="@android:style/TextAppearance.Material.Body1"/>
+            style="@android:style/TextAppearance.Material.Body1" />
 
         <NumberPicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/boypicker"
-            android:layout_marginHorizontal="5dp"/>
+            android:layout_marginHorizontal="5dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="cm"
-            style="@android:style/TextAppearance.Material.Body1"/>
+            style="@android:style/TextAppearance.Material.Body1" />
 
         <TextView
             android:layout_marginStart="15dp"
@@ -50,19 +49,19 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="KİLO"
-            style="@android:style/TextAppearance.Material.Body1"/>
+            style="@android:style/TextAppearance.Material.Body1" />
 
         <NumberPicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/kilopicker"
-            android:layout_marginHorizontal="5dp"/>
+            android:layout_marginHorizontal="5dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="kg"
-            style="@android:style/TextAppearance.Material.Body1"/>
+            style="@android:style/TextAppearance.Material.Body1" />
 
 
     </LinearLayout>
@@ -73,8 +72,7 @@
         android:id="@+id/resultsTv"
         android:padding="10dp"
         app:srcCompat="@drawable/buttonedit"
-        style="@android:style/TextAppearance.Material.Headline"
-        />
+        style="@android:style/TextAppearance.Material.Headline" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -82,8 +80,6 @@
         android:id="@+id/healthyTv"
         android:padding="10dp"
         style="@android:style/TextAppearance.Material.Headline" />
-
-
 
 
 </LinearLayout>

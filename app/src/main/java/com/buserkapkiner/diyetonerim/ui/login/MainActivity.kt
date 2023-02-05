@@ -1,9 +1,11 @@
-package com.buserkapkiner.diyetonerim
+package com.buserkapkiner.diyetonerim.ui.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.buserkapkiner.diyetonerim.databinding.ActivityMainBinding
+import com.buserkapkiner.diyetonerim.ui.bmi.BodyMossIndexActivity
+import com.buserkapkiner.diyetonerim.ui.register.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -13,13 +15,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btngiris.setOnClickListener {
-            intent = Intent(applicationContext,Bki::class.java)
+        /*binding.login.setOnClickListener {
+            intent = Intent(applicationContext, BodyMossIndexActivity::class.java)
             startActivity(intent)
         }
-        binding.btnkayit.setOnClickListener {
-            intent = Intent(applicationContext,Kayit::class.java)
+        binding.save.setOnClickListener {
+            intent = Intent(applicationContext, RegisterActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }
