@@ -34,7 +34,7 @@
         <NumberPicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/boypicker"
+            android:id="@+id/heightpicker"
             android:layout_marginHorizontal="5dp" />
 
         <TextView
@@ -54,7 +54,7 @@
         <NumberPicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/kilopicker"
+            android:id="@+id/weightpicker"
             android:layout_marginHorizontal="5dp" />
 
         <TextView

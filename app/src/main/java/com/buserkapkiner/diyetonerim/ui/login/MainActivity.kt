@@ -1,5 +1,4 @@
 package com.buserkapkiner.diyetonerim.ui.login
-
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

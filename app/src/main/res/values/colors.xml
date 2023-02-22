@@ -9,10 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="buttoncolor">#8AD7DF</color>
     <color name="edittext">#FFFFFF</color>
-    <color name="red">#A50101</color>
+    <color name="red">#FF1C1C</color>
     <color name="green">#028C08</color>
-    <color name="orange">#AA2900</color>
-    <color name="yellow">#C8AE00</color>
-    <color name="darkRed">#2E0000</color>
+    <color name="orange">#FF8224</color>
+    <color name="yellow">#FBDF4A</color>
+    <color name="darkRed">#4C0303</color>
     <color name="constraintcolor">#000232</color>
 </resources>
