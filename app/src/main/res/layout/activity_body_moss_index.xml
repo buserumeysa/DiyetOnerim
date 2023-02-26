@@ -80,7 +80,15 @@
         android:id="@+id/healthyTv"
         android:padding="10dp"
         style="@android:style/TextAppearance.Material.Headline" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_bmi_advice"
+        android:text="Diyet Önerisi"
+        android:backgroundTint="@color/white"
+        android:visibility="gone"
 
+        />
 
 </LinearLayout>
 

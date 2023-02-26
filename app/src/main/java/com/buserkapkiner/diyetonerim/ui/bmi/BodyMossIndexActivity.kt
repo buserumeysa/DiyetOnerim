@@ -2,6 +2,7 @@ package com.buserkapkiner.diyetonerim.ui.bmi
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.ActivityBodyMossIndexBinding
 import kotlinx.android.synthetic.main.activity_body_moss_index.*
@@ -35,13 +36,15 @@ class BodyMossIndexActivity : AppCompatActivity() {
         binding.resultsTv.text = String.format("Beden Kitle İndeksiniz: %.2f", bmi)
         binding.healthyTv.text = String.format("Sağlık Durumu: %s", healthyMessage(bmi))
 
+        binding.btnBmiAdvice.isVisible = healthyMessage(bmi)!="İdeal"
+
     }
 
     private fun healthyMessage(bmi: Double): String {
         sensor.setBackgroundColor(resources.getColor(R.color.yellow))
         if (bmi < 18.5)
 
-            return "Zayıf";
+            return "Zayıf"
         sensor.setBackgroundColor(resources.getColor(R.color.green))
         if (bmi < 25.0)
             return "İdeal"
