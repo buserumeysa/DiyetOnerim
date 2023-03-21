@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Diyet Onerim</string>
+    <string name="login_email_error">\"Hatalı Email Girişi\"</string>
+    <string name="login_password_error">\"Hatalı Şifre Girişi\"</string>
 </resources>
