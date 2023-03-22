@@ -2,4 +2,6 @@
     <string name="app_name">Diyet Onerim</string>
     <string name="login_email_error">\"Hatalı Email Girişi\"</string>
     <string name="login_password_error">\"Hatalı Şifre Girişi\"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
