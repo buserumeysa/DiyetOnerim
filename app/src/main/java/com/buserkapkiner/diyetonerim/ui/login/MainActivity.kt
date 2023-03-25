@@ -4,9 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.ActivityMainBinding
-import com.buserkapkiner.diyetonerim.ui.homepage.HomePageFragment
+import com.buserkapkiner.diyetonerim.ui.homepage.HomePageActivity
 import com.buserkapkiner.diyetonerim.ui.register.RegisterActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -20,17 +19,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         binding.btnLogin.setOnClickListener {
             var userName = binding.edtTxtUserName.text.toString()
             var userPassword = binding.edtTxtPassword.text.toString()
-            login(email = userName, password = userPassword)
+            login(
+                email = userName,
+                password = userPassword
+            )
+            intent = Intent(applicationContext, HomePageActivity::class.java)
+            startActivity(intent)
 
 
         }
@@ -40,16 +41,16 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     fun login(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // FragmentTransaction oluştur
-                    val fragmentManager = supportFragmentManager
-                    val fragmentTransaction = fragmentManager.beginTransaction()
-                    fragmentTransaction.add(R.id.fragment_container,HomePageFragment())
-                    fragmentTransaction.addToBackStack(null)
-                    fragmentTransaction.commit()
+                    Toast.makeText(
+                        baseContext,
+                        "HOŞGELDİNİZ",
+                        Toast.LENGTH_SHORT
+                    ).show()
 
 
                 } else {
@@ -62,7 +63,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
-
 
 
 }

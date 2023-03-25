@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/constraintcolor"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.calendar.CalendarActivity">
 
     <TextView
         android:id="@+id/txt_calendar"
@@ -27,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="16dp"
         android:background="@color/edittext"
         android:text="Takvimi Görüntülemek İçin Tıklayın"

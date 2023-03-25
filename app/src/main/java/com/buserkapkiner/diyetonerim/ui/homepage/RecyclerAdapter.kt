@@ -13,7 +13,7 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     private var images = intArrayOf(R.drawable.bki,R.drawable.diyet,R.drawable.takvim,R.drawable.tart,R.drawable.su)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolder {
-        val v= LayoutInflater.from(parent.context).inflate(R.layout.card_layout,parent,false)
+        val v= LayoutInflater.from(parent.context).inflate(R.layout.activity_home_page,parent,false)
         return ViewHolder(v)
     }
     override fun getItemCount(): Int {
