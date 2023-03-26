@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/drawable/ic_add.xml" value="0.1195" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_body_moss_index.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_calendar.xml" value="0.2" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_calorie_counter.xml" value="0.264" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_diet.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_home_page.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -17,6 +19,9 @@
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_body_moss_index.xml" value="0.1" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_body_moss_index_fragmentt.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_home_page.xml" value="0.25" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/item_1.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/item_2.xml" value="0.1875" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/item_3.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/menu/diyet_onerim.xml" value="0.24895833333333334" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.123" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/drawable/arkaplanedit.xml" value="0.123" />
