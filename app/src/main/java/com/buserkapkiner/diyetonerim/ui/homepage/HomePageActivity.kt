@@ -3,15 +3,14 @@ package com.buserkapkiner.diyetonerim.ui.homepage
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.ActivityHomePageBinding
 import com.buserkapkiner.diyetonerim.ui.bmi.BodyMossIndexActivity
 import com.buserkapkiner.diyetonerim.ui.calendar.CalendarActivity
+import com.buserkapkiner.diyetonerim.ui.calorieCounter.CalorieCounterActivity
+import com.buserkapkiner.diyetonerim.ui.diet.DietActivity
+import com.buserkapkiner.diyetonerim.ui.weightTracking.WeightTrackingActivity
 
 class HomePageActivity : AppCompatActivity() {
-    private val homePageRecyclerAdapter = RecyclerAdapter()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +25,7 @@ class HomePageActivity : AppCompatActivity() {
 
         }
         binding.imgDiet.setOnClickListener {
-            intent = Intent(applicationContext, BodyMossIndexActivity::class.java)
+            intent = Intent(applicationContext, DietActivity::class.java)
             startActivity(intent)
 
         }
@@ -36,27 +35,21 @@ class HomePageActivity : AppCompatActivity() {
 
         }
         binding.imgWater.setOnClickListener {
-            intent = Intent(applicationContext, BodyMossIndexActivity::class.java)
+            intent = Intent(applicationContext, CalorieCounterActivity::class.java)
             startActivity(intent)
 
         }
         binding.imgWeightTracking.setOnClickListener {
-            intent = Intent(applicationContext, BodyMossIndexActivity::class.java)
+            intent = Intent(applicationContext, WeightTrackingActivity::class.java)
             startActivity(intent)
 
         }
-        val recyclerView = findViewById<RecyclerView>(R.id.home_page_recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-
-        val adapter = RecyclerAdapter()
-
-        recyclerView.adapter= adapter
-
-    }
 
 
     }
 
+
+}
 
 
 

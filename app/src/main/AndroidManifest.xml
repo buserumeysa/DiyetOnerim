@@ -25,6 +25,18 @@
             android:name=".ui.calendar.CalendarActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.diet.DietActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".ui.calorieCounter.CalorieCounterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.weightTracking.WeightTrackingActivity"
+            android:exported="false" />
+
+        <activity
+
             android:name=".ui.homepage.HomePageActivity"
             android:exported="false" />
         <activity
