@@ -29,6 +29,10 @@
             android:exported="false"
             />
         <activity
+            android:name=".ui.diet.DetailActivity"
+            android:exported="false"
+            />
+        <activity
             android:name=".ui.calorieCounter.CalorieCounterActivity"
             android:exported="false" />
         <activity
