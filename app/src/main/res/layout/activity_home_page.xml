@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/constraintcolor"
-    tools:context=".ui.homepage.HomePageActivity"
-    >
+    android:background="#EAEAEA"
+    tools:context=".ui.homepage.HomePageActivity">
+    
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingStart="80dp"
-            android:paddingEnd="0dp">
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
             <ImageView
                 android:id="@+id/img_bki"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/bki"
+                android:radius="20dp"
                 android:scaleType="centerCrop"
+                android:src="@drawable/bki"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.422"
@@ -38,16 +41,18 @@
 
             <TextView
                 android:id="@+id/txt_bki"
-                android:layout_width="261dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:text="Beden Kitle İndeksi Hesapla"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/constraintcolor"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/img_bki"
                 app:layout_constraintHorizontal_bias="0.36"
                 app:layout_constraintStart_toStartOf="@id/img_bki"
@@ -55,9 +60,10 @@
 
             <ImageView
                 android:id="@+id/img_diet"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:background="@drawable/diyet"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:src="@drawable/diyet"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.422"
@@ -68,16 +74,18 @@
 
             <TextView
                 android:id="@+id/txt_diet"
-                android:layout_width="261dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginEnd="50dp"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:text="Diyet Listeleri"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/constraintcolor"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/img_diet"
                 app:layout_constraintHorizontal_bias="0.602"
                 app:layout_constraintStart_toStartOf="@id/img_diet"
@@ -85,9 +93,10 @@
 
             <ImageView
                 android:id="@+id/img_calendar"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:background="@drawable/takvim"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:src="@drawable/takvim"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.422"
                 app:layout_constraintStart_toStartOf="parent"
@@ -97,16 +106,17 @@
 
             <TextView
                 android:id="@+id/text_calendar"
-                android:layout_width="261dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="50dp"
                 android:gravity="center"
                 android:text="Takvim"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/constraintcolor"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/img_calendar"
                 app:layout_constraintHorizontal_bias="0.36"
                 app:layout_constraintStart_toStartOf="@id/img_calendar"
@@ -114,9 +124,10 @@
 
             <ImageView
                 android:id="@+id/img_water"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:background="@drawable/su"
+                android:layout_width="295dp"
+                android:layout_height="270dp"
+                android:layout_gravity="center"
+                android:src="@drawable/besinpiramiti"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.422"
                 app:layout_constraintStart_toStartOf="parent"
@@ -126,16 +137,16 @@
 
             <TextView
                 android:id="@+id/txt_water"
-                android:layout_width="261dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
                 android:gravity="center"
-                android:text="Su Tüketimi"
+                android:text="Besin - Kalori Takibi"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/constraintcolor"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/img_water"
                 app:layout_constraintHorizontal_bias="0.36"
                 app:layout_constraintStart_toStartOf="@id/img_water"
@@ -143,8 +154,9 @@
 
             <ImageView
                 android:id="@+id/img_weight_tracking"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
                 android:background="@drawable/tart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.422"
@@ -155,16 +167,18 @@
 
             <TextView
                 android:id="@+id/txt_weight_tracking"
-                android:layout_width="261dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginEnd="50dp"
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:text="Kilo Takibi"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/constraintcolor"
                 android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/img_weight_tracking"
                 app:layout_constraintHorizontal_bias="0.36"
                 app:layout_constraintStart_toStartOf="@id/img_weight_tracking"

@@ -75,7 +75,7 @@
         android:layout_marginBottom="35dp"
 
         android:backgroundTint="@color/white"
-
+        android:textColor="@color/black"
         android:text="Kayıt Ol"
         android:textSize="18dp"
         app:cornerRadius="20dp"
@@ -88,7 +88,7 @@
         android:id="@+id/btn_back_to_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:textColor="@color/black"
         android:layout_marginBottom="115dp"
         android:backgroundTint="@color/white"
         android:text="GİRİŞ SAYSASINA DÖN"

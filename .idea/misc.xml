@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/drawable/arkaplanedit.xml" value="0.158" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/drawable/buttonedit.xml" value="0.158" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/drawable/ic_add.xml" value="0.1195" />
-        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_body_moss_index.xml" value="0.25" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.158" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_body_moss_index.xml" value="0.1" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_calendar.xml" value="0.2" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_calorie_counter.xml" value="0.264" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_diet.xml" value="0.25" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_food.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_home_page.xml" value="0.1" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_register.xml" value="0.25" />
@@ -17,9 +21,12 @@
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activty_home_page.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/card_cell.xml" value="0.2" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/card_layout.xml" value="0.25" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/food_recyclerview_row.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_base.xml" value="0.23055555555555557" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_body_moss_index.xml" value="0.1" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_body_moss_index_fragmentt.xml" value="0.25" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_food_detail.xml" value="0.152" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_food_list.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/fragment_home_page.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/item_1.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/item_2.xml" value="0.1875" />

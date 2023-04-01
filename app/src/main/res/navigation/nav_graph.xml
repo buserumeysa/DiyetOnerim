@@ -5,7 +5,25 @@
     android:id="@+id/nav_graph.xml"
     app:startDestination="@id/homePageFragment">
     <fragment
-        android:id="@+id/homePageFragment"
-        android:name="com.buserkapkiner.diyetonerim.ui.homepage.HomePageFragment"
-        android:label="HomePageFragment" />
+        android:id="@+id/foodListFragment"
+        android:name="com.buserkapkiner.diyetonerim.ui.foodBook.FoodListFragment"
+        android:label="fragment_food_list"
+        tools:layout="@layout/fragment_food_list" >
+        <action
+            android:id="@+id/action_foodListFragment_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.buserkapkiner.diyetonerim.ui.foodBook.FoodDetailFragment"
+        android:label="fragment_food_detail"
+        tools:layout="@layout/fragment_food_detail" >
+        <action
+            android:id="@+id/action_foodDetailFragment_to_foodListFragment"
+            app:destination="@id/foodListFragment" />
+        <argument
+            android:name="foodId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>

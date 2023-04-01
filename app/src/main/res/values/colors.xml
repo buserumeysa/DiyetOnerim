@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimaryDark">#FF018786</color>
-    <color name="colorPrimaryVaryant">#FFFFFF</color>
-    <color name="colorOnPrimary">#FFFFFF</color>
-    <color name="colorPrimary">#FFFFFF</color>
+    <color name="backgroudcolor">#FFFFFFFF</color>
     <color name="gray">#888</color>
     <color name="blue">#0000FF</color>
     <color name="black">#FF000000</color>
@@ -11,7 +8,6 @@
     <color name="blue900">#1A237E</color>
     <color name="blue600">#1E88E5</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="backgroundLight">#DFDFDF</color>
     <color name="lightblue">#19D9ED</color>
     <color name="edittext">#FFFFFF</color>
     <color name="red">#FF1C1C</color>
@@ -20,4 +16,5 @@
     <color name="yellow">#FBDF4A</color>
     <color name="darkRed">#4C0303</color>
     <color name="constraintcolor">#000232</color>
+
 </resources>
