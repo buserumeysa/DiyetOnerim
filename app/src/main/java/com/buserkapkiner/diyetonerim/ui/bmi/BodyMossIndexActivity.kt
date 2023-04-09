@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.ActivityBodyMossIndexBinding
-import kotlinx.android.synthetic.main.activity_body_moss_index.*
-import kotlinx.coroutines.delay
 
 class BodyMossIndexActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBodyMossIndexBinding
@@ -41,21 +39,21 @@ class BodyMossIndexActivity : AppCompatActivity() {
     }
 
     private fun healthyMessage(bmi: Double): String {
-        sensor.setBackgroundColor(resources.getColor(R.color.yellow))
+        binding.sensor.setBackgroundColor(resources.getColor(R.color.yellow))
         if (bmi < 18.5)
 
             return "Zayıf"
-        sensor.setBackgroundColor(resources.getColor(R.color.green))
+        binding.sensor.setBackgroundColor(resources.getColor(R.color.green))
         if (bmi < 25.0)
             return "İdeal"
-        sensor.setBackgroundColor(resources.getColor(R.color.orange))
+        binding.sensor.setBackgroundColor(resources.getColor(R.color.orange))
         if (bmi < 30.0)
             return "Kilolu"
-        sensor.setBackgroundColor(resources.getColor(R.color.red))
+        binding.sensor.setBackgroundColor(resources.getColor(R.color.red))
         if (bmi < 35.0)
             return "Obez"
 
-        sensor.setBackgroundColor(resources.getColor(R.color.darkRed))
+        binding.sensor.setBackgroundColor(resources.getColor(R.color.darkRed))
         return "Morbid Obez"
 
 

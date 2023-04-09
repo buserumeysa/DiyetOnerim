@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import com.buserkapkiner.diyetonerim.R
-import kotlinx.android.synthetic.main.fragment_food_detail.*
 
 
 class FoodDetailFragment : Fragment() {
@@ -32,10 +30,7 @@ class FoodDetailFragment : Fragment() {
             foodId= FoodDetailFragmentArgs.fromBundle(it).foodId
             println(foodId)
         }
-        btn_go_to_the_fragmentFoodList.setOnClickListener{
-            val action = FoodDetailFragmentDirections.actionFoodDetailFragmentToFoodListFragment()
-            Navigation.findNavController(it).navigate(action)
-        }
+
     }
 
 

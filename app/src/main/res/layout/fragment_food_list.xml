@@ -2,7 +2,9 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.foodBook.FoodListFragment"
+    >
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
@@ -14,7 +16,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".ui.foodBook.FoodListFragment"
+
             android:background="@color/constraintcolor">
 
 
