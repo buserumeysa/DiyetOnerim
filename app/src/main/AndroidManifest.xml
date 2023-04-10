@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.buserkapkiner.diyetonerim">
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiyetOnerim"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.dietAdvice.DietAdviceToMorbidObeseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dietAdvice.DietAdviceToObeseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dietAdvice.DietAdviceToFatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dietAdvice.DietAdviceToIdealActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dietAdvice.DietAdviceToWeakActivity"
+            android:exported="false" />
 
         <activity
             android:name=".ui.bmi.BodyMossIndexActivity"
@@ -26,12 +40,10 @@
             android:exported="false" />
         <activity
             android:name=".ui.diet.DietActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".ui.diet.DetailActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".ui.calorieCounter.CalorieCounterActivity"
             android:exported="false" />
@@ -40,11 +52,8 @@
             android:exported="false" />
         <activity
             android:name=".ui.foodBook.FoodActivity"
-            android:exported="false"
-            />
-
+            android:exported="false" />
         <activity
-
             android:name=".ui.homepage.HomePageActivity"
             android:exported="false" />
         <activity
@@ -55,11 +64,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-
     </application>
-
 
 </manifest>

@@ -1,10 +1,12 @@
 package com.buserkapkiner.diyetonerim.ui.bmi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.ActivityBodyMossIndexBinding
+import com.buserkapkiner.diyetonerim.ui.dietAdvice.*
 
 class BodyMossIndexActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBodyMossIndexBinding
@@ -34,11 +36,34 @@ class BodyMossIndexActivity : AppCompatActivity() {
         binding.resultsTv.text = String.format("Beden Kitle İndeksiniz: %.2f", bmi)
         binding.healthyTv.text = String.format("Sağlık Durumu: %s", healthyMessage(bmi))
 
-        binding.btnBmiAdviceWeak.isVisible = healthyMessage(bmi)=="Zayıf"
-        binding.btnBmiAdviceNormal.isVisible = healthyMessage(bmi)=="İdeal"
-        binding.btnBmiAdviceFat.isVisible = healthyMessage(bmi)=="Kilolu"
-        binding.btnBmiAdviceObese.isVisible = healthyMessage(bmi)=="Obez"
-        binding.btnBmiAdviceMorbid.isVisible = healthyMessage(bmi)=="Morbid Obez"
+        binding.btnBmiAdviceWeak.isVisible = healthyMessage(bmi) == "Zayıf"
+        binding.btnBmiAdviceNormal.isVisible = healthyMessage(bmi) == "İdeal"
+        binding.btnBmiAdviceFat.isVisible = healthyMessage(bmi) == "Kilolu"
+        binding.btnBmiAdviceObese.isVisible = healthyMessage(bmi) == "Obez"
+        binding.btnBmiAdviceMorbid.isVisible = healthyMessage(bmi) == "Morbid Obez"
+
+        binding.btnBmiAdviceWeak.setOnClickListener {
+            intent = Intent(applicationContext, DietAdviceToWeakActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnBmiAdviceNormal.setOnClickListener {
+            intent = Intent(applicationContext, DietAdviceToIdealActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnBmiAdviceFat.setOnClickListener {
+            intent = Intent(applicationContext, DietAdviceToFatActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnBmiAdviceObese.setOnClickListener {
+            intent = Intent(applicationContext, DietAdviceToObeseActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnBmiAdviceMorbid.setOnClickListener {
+            intent = Intent(applicationContext, DietAdviceToMorbidObeseActivity::class.java)
+            startActivity(intent)
+
+        }
 
     }
 
@@ -62,4 +87,5 @@ class BodyMossIndexActivity : AppCompatActivity() {
 
 
     }
+
 }

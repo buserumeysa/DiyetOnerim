@@ -12,6 +12,11 @@
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_calorie_counter.xml" value="0.264" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_diet.xml" value="0.25" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_diet_advice_to_fat.xml" value="0.264" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_diet_advice_to_ideal.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_diet_advice_to_morbid_obese.xml" value="0.264" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_diet_advice_to_obese.xml" value="0.264" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_diet_advice_to_weak.xml" value="0.264" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_food.xml" value="0.25" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_home_page.xml" value="0.1" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -31,6 +36,7 @@
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/item_1.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/item_2.xml" value="0.1875" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/item_3.xml" value="0.25" />
+        <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/layout/listview_items.xml" value="0.1601775956284153" />
         <entry key="..\:/Users/mcbed/AndroidStudioProjects/DiyetOnerim/app/src/main/res/menu/diyet_onerim.xml" value="0.24895833333333334" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.123" />
         <entry key="..\:/applications/DiyetOnerim/app/src/main/res/drawable/arkaplanedit.xml" value="0.123" />

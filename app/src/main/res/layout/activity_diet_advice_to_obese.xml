@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/red"
+    tools:context=".ui.dietAdvice.DietAdviceToWeakActivity">
+
+    <TextView
+        android:id="@+id/week_title_obese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Haftalık Diyet Listesi"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_obese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:justificationMode="inter_word"
+        android:text="Obez bir kişi için önerilen haftalık diyet listesi, sağlıklı beslenmeyi destekleyen ve aynı zamanda kilo kaybına yardımcı olan yiyecekler içermelidir. Ancak kişinin özelliklerine ve sağlık durumuna göre diyet listesi değişebilir. Bu nedenle, bir beslenme uzmanıyla da görüşmeniz önerilir.Bu diyet listesi, özellikle yüksek lif, protein ve sağlıklı yağ içeren yiyeceklerle zenginleştirilmiştir. "
+        android:textAlignment="center"
+        android:textColor="#A6A5A5"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/diet_list_view_obese"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:divider="@color/white" />
+
+</LinearLayout>
