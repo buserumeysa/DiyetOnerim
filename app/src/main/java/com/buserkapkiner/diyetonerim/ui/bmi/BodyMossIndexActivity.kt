@@ -34,7 +34,11 @@ class BodyMossIndexActivity : AppCompatActivity() {
         binding.resultsTv.text = String.format("Beden Kitle İndeksiniz: %.2f", bmi)
         binding.healthyTv.text = String.format("Sağlık Durumu: %s", healthyMessage(bmi))
 
-        binding.btnBmiAdvice.isVisible = healthyMessage(bmi)!="İdeal"
+        binding.btnBmiAdviceWeak.isVisible = healthyMessage(bmi)=="Zayıf"
+        binding.btnBmiAdviceNormal.isVisible = healthyMessage(bmi)=="İdeal"
+        binding.btnBmiAdviceFat.isVisible = healthyMessage(bmi)=="Kilolu"
+        binding.btnBmiAdviceObese.isVisible = healthyMessage(bmi)=="Obez"
+        binding.btnBmiAdviceMorbid.isVisible = healthyMessage(bmi)=="Morbid Obez"
 
     }
 
