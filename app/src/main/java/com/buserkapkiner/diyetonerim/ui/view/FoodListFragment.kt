@@ -1,15 +1,19 @@
-package com.buserkapkiner.diyetonerim.ui.foodBook
+package com.buserkapkiner.diyetonerim.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.buserkapkiner.diyetonerim.R
+import com.buserkapkiner.diyetonerim.ui.viewmodel.FoodListViewModel
 
 
 class FoodListFragment : Fragment() {
+    private val viewModel: FoodListViewModel by viewModels()
 
+    private  var foodRecyclerAdapter= FoodAdapter(ArrayList())
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +31,9 @@ class FoodListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        viewModel.refresData()
     }
+
 
 
 }

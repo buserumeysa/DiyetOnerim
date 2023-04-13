@@ -51,7 +51,7 @@
             android:name=".ui.weightTracking.WeightTrackingActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.foodBook.FoodActivity"
+            android:name=".ui.view.FoodActivity"
             android:exported="false" />
         <activity
             android:name=".ui.homepage.HomePageActivity"
