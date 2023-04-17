@@ -3,20 +3,50 @@ package com.buserkapkiner.diyetonerim.ui.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.buserkapkiner.diyetonerim.ui.model.Food
+import com.buserkapkiner.diyetonerim.ui.service.FoodAPIService
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.observers.DisposableSingleObserver
+import io.reactivex.schedulers.Schedulers
 
 class FoodListViewModel:ViewModel() {
     val foods =MutableLiveData<List<Food>>()
     val foodsErrorMessage=MutableLiveData<Boolean>()
     val foodsLoading=MutableLiveData<Boolean>()
 
+
+    private val foodApiService =FoodAPIService()
+    private val disposable = CompositeDisposable()//kullan at
     fun refresData(){
-        val muz =Food("muz","20","3","3","2","aktins.jpeg")
-        val erik =Food("erik","10","2","2","3","aktins.jpeg")
-        val elma =Food("elma","15","1","1","4","aktins.jpeg")
-        val foodList= arrayListOf<Food>(muz,erik,elma)
-        foods.value=foodList
-        foodsLoading.value=false
-        foodsErrorMessage.value=true
+        getDataFromTheInternet()
+
+    }
+    private fun getDataFromTheInternet(){
+        foodsLoading.value=true
+
+        disposable.add(
+            foodApiService.getData()
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object :DisposableSingleObserver<List<Food>>(){
+                    override fun onSuccess(t: List<Food>) {
+                        //Başarılı olursa
+                        foods.value = t
+                        foodsErrorMessage.value= false
+                        foodsLoading.value= false
+
+                    }
+
+                    override fun onError(e: Throwable) {
+                        //hata alınırsa
+
+                        foodsErrorMessage.value=true
+                        foodsLoading.value=false
+                        e.printStackTrace()
+                    }
+
+                })
+        )
     }
 
 }

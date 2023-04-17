@@ -45,6 +45,18 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
         binding.foodListRecyclerView.layoutManager=LinearLayoutManager(context)
         binding.foodListRecyclerView.adapter =foodRecyclerAdapter
 
+        binding.swipeRefreshLayout.setOnRefreshListener{ //sayfayı yenileme
+            binding.foodListRecyclerView.visibility= View.GONE
+            binding.txtErrorMessage.visibility=View.GONE
+            binding.progressBarFragmentFoodList.visibility=View.VISIBLE
+            viewModel.refresData()
+            binding.swipeRefreshLayout.isRefreshing =false
+
+
+
+        }
+        observeLiveData()
+
 
 
     }
@@ -85,12 +97,7 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
             }
         })
     }
-    override fun onStart() {
-        super.onStart()
-        observeLiveData()
 
-
-}
 
 
 }
