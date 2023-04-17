@@ -6,14 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.buserkapkiner.diyetonerim.R
+import com.buserkapkiner.diyetonerim.databinding.FragmentFoodListBinding
 import com.buserkapkiner.diyetonerim.ui.viewmodel.FoodListViewModel
 
 
-class FoodListFragment : Fragment() {
-    private val viewModel: FoodListViewModel by viewModels()
+class FoodListFragment : Fragment(R.layout.fragment_food_list) {
+    // View Binding
+    private var _binding: FragmentFoodListBinding? = null
+    private val binding get() = _binding!!
+    val viewModel: FoodListViewModel by viewModels()
 
-    private  var foodRecyclerAdapter= FoodAdapter(ArrayList())
+    private  var foodRecyclerAdapter= FoodAdapter(arrayListOf())
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,18 +28,69 @@ class FoodListFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_food_list, container, false)
+        _binding = FragmentFoodListBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.refresData()
-    }
 
+        viewModel.refresData()
+        binding.foodListRecyclerView.layoutManager=LinearLayoutManager(context)
+        binding.foodListRecyclerView.adapter =foodRecyclerAdapter
+
+
+
+    }
+    private fun observeLiveData(){
+        viewModel.foods.observe(viewLifecycleOwner, Observer {foods->
+            foods?.let {
+                binding.foodListRecyclerView.visibility= View.VISIBLE
+                foodRecyclerAdapter.updateFoodList(foods)
+
+            }
+        })
+        viewModel.foodsErrorMessage.observe(viewLifecycleOwner,Observer{error->
+            error?.let {
+                if (it){
+                    binding.txtErrorMessage.visibility=View.VISIBLE
+
+                }
+                else{
+                    binding.txtErrorMessage.visibility=View.GONE
+                    binding.foodListRecyclerView.visibility= View.GONE
+                }
+
+
+            }
+        })
+        viewModel.foodsLoading.observe(viewLifecycleOwner,Observer{loading->
+            loading?.let {
+                if (it){
+                    binding.foodListRecyclerView.visibility= View.GONE
+                    binding.txtErrorMessage.visibility=View.GONE
+                    binding.progressBarFragmentFoodList.visibility=View.VISIBLE
+
+                }
+                else{
+                    binding.progressBarFragmentFoodList.visibility=View.GONE
+
+                }
+            }
+        })
+    }
+    override fun onStart() {
+        super.onStart()
+        observeLiveData()
+
+
+}
 
 
 }

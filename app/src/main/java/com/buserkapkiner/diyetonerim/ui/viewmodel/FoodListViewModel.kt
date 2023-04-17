@@ -16,7 +16,7 @@ class FoodListViewModel:ViewModel() {
         val foodList= arrayListOf<Food>(muz,erik,elma)
         foods.value=foodList
         foodsLoading.value=false
-        foodsErrorMessage.value=false
+        foodsErrorMessage.value=true
     }
 
 }

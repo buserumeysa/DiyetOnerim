@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.buserkapkiner.diyetonerim.databinding.ActivityHomePageBinding
 import com.buserkapkiner.diyetonerim.ui.bmi.BodyMossIndexActivity
 import com.buserkapkiner.diyetonerim.ui.calendar.CalendarActivity
-import com.buserkapkiner.diyetonerim.ui.calorieCounter.CalorieCounterActivity
 import com.buserkapkiner.diyetonerim.ui.diet.DietActivity
+import com.buserkapkiner.diyetonerim.ui.view.FoodActivity
 import com.buserkapkiner.diyetonerim.ui.weightTracking.WeightTrackingActivity
 
 class HomePageActivity : AppCompatActivity() {
@@ -35,7 +35,7 @@ class HomePageActivity : AppCompatActivity() {
 
         }
         binding.imgWater.setOnClickListener {
-            intent = Intent(applicationContext, CalorieCounterActivity::class.java)
+            intent = Intent(applicationContext, FoodActivity::class.java)
             startActivity(intent)
 
         }

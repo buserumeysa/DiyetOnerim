@@ -5,10 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.buserkapkiner.diyetonerim.R
+import com.buserkapkiner.diyetonerim.databinding.FragmentFoodDetailBinding
+import com.buserkapkiner.diyetonerim.ui.viewmodel.FoodDetailViewModel
 
 
 class FoodDetailFragment : Fragment() {
+    private lateinit var viewModel: FoodDetailViewModel
+    // View Binding
+    private var _binding: FragmentFoodDetailBinding? = null
+    private val binding get() = _binding!!
     private var foodId=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +38,20 @@ class FoodDetailFragment : Fragment() {
             foodId= FoodDetailFragmentArgs.fromBundle(it).foodId
             println(foodId)
         }
-
+        viewModel=ViewModelProvider(this).get(FoodDetailViewModel::class.java)
+        viewModel.roomGetData()
+        observeLiveData()
+    }
+    fun observeLiveData(){
+        viewModel.foodLiveData.observe(viewLifecycleOwner, Observer {food->
+            food?.let {
+                binding.txtDetailFoodName.text = it.foodName
+                binding.txtDetailFoodCalorie.text = it.foodCalorie
+                binding.txtDetailFoodCarbohidrates.text = it.foodCarbohydrates
+                binding.txtDetailFoodProtein.text = it.foodProtein
+                binding.txtDetailFoodFat.text = it.foodFat
+            }
+        })
     }
 
 
