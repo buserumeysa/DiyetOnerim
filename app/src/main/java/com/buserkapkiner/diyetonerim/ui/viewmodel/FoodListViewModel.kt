@@ -1,15 +1,17 @@
 package com.buserkapkiner.diyetonerim.ui.viewmodel
 
+import android.app.Application
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.buserkapkiner.diyetonerim.ui.model.Food
 import com.buserkapkiner.diyetonerim.ui.service.FoodAPIService
+import com.buserkapkiner.diyetonerim.ui.service.FoodDataBase
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.launch
 
-class FoodListViewModel:ViewModel() {
+class FoodListViewModel(application: Application):BaseViewModel(application) {
     val foods =MutableLiveData<List<Food>>()
     val foodsErrorMessage=MutableLiveData<Boolean>()
     val foodsLoading=MutableLiveData<Boolean>()
@@ -31,9 +33,7 @@ class FoodListViewModel:ViewModel() {
                 .subscribeWith(object :DisposableSingleObserver<List<Food>>(){
                     override fun onSuccess(t: List<Food>) {
                         //Başarılı olursa
-                        foods.value = t
-                        foodsErrorMessage.value= false
-                        foodsLoading.value= false
+                        saveToSql(t)
 
                     }
 
@@ -47,6 +47,27 @@ class FoodListViewModel:ViewModel() {
 
                 })
         )
+    }
+    private fun showFoods(foodsList: List<Food>){
+        foods.value = foodsList
+        foodsErrorMessage.value= false
+        foodsLoading.value= false
+
+
+    }
+    private fun saveToSql(foodsList: List<Food>){
+        launch {
+            val dao=FoodDataBase(getApplication()).foodDao()
+            dao.deleteAllFood()
+            val uuidList = dao.insertAll(*foodsList.toTypedArray()) //listeyi tek tek dao içerisine ver
+            var i=0
+            while (i<foodsList.size){
+                foodsList[i].uuid=uuidList[i].toInt()
+                i = i+1
+                showFoods(foodsList)
+            }
+        }
+
     }
 
 }

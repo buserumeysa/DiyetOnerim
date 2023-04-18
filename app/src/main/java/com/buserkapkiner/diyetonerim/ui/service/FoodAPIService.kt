@@ -19,4 +19,5 @@ class FoodAPIService {
     fun getData(): Single<List<Food>> {
         return api.getFood()
     }
+
 }

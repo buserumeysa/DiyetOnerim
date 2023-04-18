@@ -14,6 +14,7 @@ class FoodAdapter (val foodList :ArrayList<Food>):RecyclerView.Adapter<FoodAdapt
     class FoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val txtFoodName: TextView
         val txtFoodCalorie: TextView
+
         init {
             // Define click listener for the ViewHolder's View
             txtFoodName = itemView.findViewById(R.id.txt_food_name)
@@ -39,6 +40,7 @@ class FoodAdapter (val foodList :ArrayList<Food>):RecyclerView.Adapter<FoodAdapt
             val action=FoodListFragmentDirections.actionFoodListFragmentToFoodDetailFragment(0)
             Navigation.findNavController(it).navigate(action)
         }
+        //holder.itemView.imgFood.pictureInstall(foodList.get(position).foodImage, placeholderCreate(holder.itemView.context))
     }
     fun updateFoodList(newFoodList:List<Food>){
         foodList.clear()

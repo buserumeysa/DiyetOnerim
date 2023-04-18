@@ -45,11 +45,11 @@ class FoodDetailFragment : Fragment() {
     fun observeLiveData(){
         viewModel.foodLiveData.observe(viewLifecycleOwner, Observer {food->
             food?.let {
-                binding.txtDetailFoodName.text = it.foodName
-                binding.txtDetailFoodCalorie.text = it.foodCalorie
-                binding.txtDetailFoodCarbohidrates.text = it.foodCarbohydrates
-                binding.txtDetailFoodProtein.text = it.foodProtein
-                binding.txtDetailFoodFat.text = it.foodFat
+                binding.txtDetailFoodName.text = it.isim
+                binding.txtDetailFoodCalorie.text = it.kalori
+                binding.txtDetailFoodCarbohidrates.text = it.karbonhidrat
+                binding.txtDetailFoodProtein.text = it.protein
+                binding.txtDetailFoodFat.text = it.yag
             }
         })
     }
