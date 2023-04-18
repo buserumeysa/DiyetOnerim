@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.FragmentFoodListBinding
 import com.buserkapkiner.diyetonerim.ui.viewmodel.FoodListViewModel
@@ -19,7 +18,7 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
     private val binding get() = _binding!!
     val viewModel: FoodListViewModel by viewModels()
 
-    private  var foodRecyclerAdapter= FoodAdapter(arrayListOf())
+    private var foodRecyclerAdapter= FoodAdapter(arrayListOf())
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,14 +41,13 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.refresData()
-        binding.foodListRecyclerView.layoutManager=LinearLayoutManager(context)
         binding.foodListRecyclerView.adapter =foodRecyclerAdapter
 
         binding.swipeRefreshLayout.setOnRefreshListener{ //sayfayı yenileme
-            binding.foodListRecyclerView.visibility= View.GONE
+            //binding.foodListRecyclerView.visibility= View.GONE
             binding.txtErrorMessage.visibility=View.GONE
             binding.progressBarFragmentFoodList.visibility=View.VISIBLE
-            viewModel.refresData()
+            viewModel.refreshFromInternet()
             binding.swipeRefreshLayout.isRefreshing =false
 
 
@@ -72,14 +70,12 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
             error?.let {
                 if (it){
                     binding.txtErrorMessage.visibility=View.VISIBLE
-
+                    binding.foodListRecyclerView.visibility= View.GONE
                 }
                 else{
                     binding.txtErrorMessage.visibility=View.GONE
-                    binding.foodListRecyclerView.visibility= View.GONE
+                    binding.foodListRecyclerView.visibility= View.VISIBLE
                 }
-
-
             }
         })
         viewModel.foodsLoading.observe(viewLifecycleOwner,Observer{loading->
@@ -92,6 +88,7 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
                 }
                 else{
                     binding.progressBarFragmentFoodList.visibility=View.GONE
+                    binding.foodListRecyclerView.visibility= View.VISIBLE
 
                 }
             }

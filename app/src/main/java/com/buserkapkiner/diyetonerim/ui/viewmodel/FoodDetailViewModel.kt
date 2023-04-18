@@ -1,14 +1,20 @@
 package com.buserkapkiner.diyetonerim.ui.viewmodel
 
+import android.app.Application
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.buserkapkiner.diyetonerim.ui.model.Food
+import com.buserkapkiner.diyetonerim.ui.service.FoodDataBase
+import kotlinx.coroutines.launch
 
-class FoodDetailViewModel: ViewModel() {
-    val foodLiveData=MutableLiveData<Food>()
+class FoodDetailViewModel(application: Application):BaseViewModel(application) {
+    val foodLiveData = MutableLiveData<Food>()
 
-    fun roomGetData(){
-        val muz =Food("muz","20","3","3","2","aktins.jpeg")
-        foodLiveData.value=muz
+    fun roomGetData(uuid: Int) {
+        launch {
+            val dao = FoodDataBase(getApplication()).foodDao()
+            val food = dao.getFood(uuid)
+            foodLiveData.value = food
+        }
+
     }
 }

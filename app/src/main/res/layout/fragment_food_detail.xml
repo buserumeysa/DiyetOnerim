@@ -1,87 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.view.FoodDetailFragment">
-<RelativeLayout
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-    <ImageView
-        android:id="@+id/img_detail_food"
+    <data>
+
+        <variable
+            name="selectedFood"
+            type="com.buserkapkiner.diyetonerim.ui.model.Food" />
+    </data>
+
+    <RelativeLayout
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="200dp"
-        android:scaleType="fitCenter"
-        android:layout_alignParentTop="true"
-        app:srcCompat="@drawable/aktins"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_detail_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:downloadImage="@{selectedFood.gorsel}"
+            android:minHeight="200dp"
+            android:scaleType="fitCenter">
 
 
-    </ImageView>
-    <TextView
-        android:id="@+id/txt_detail_food_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/img_detail_food"
-        android:text="Besin İsmi"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
-        >
+        </ImageView>
 
-    </TextView>
-    <TextView
-        android:id="@+id/txt_detail_food_calorie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_detail_food_name"
-        android:text="Besin Kalorisi"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        >
-    </TextView>
+        <TextView
+            android:id="@+id/txt_detail_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_detail_food"
+            android:layout_centerHorizontal="true"
+            android:text="@{selectedFood.isim}"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold">
 
-    <TextView
-        android:id="@+id/txt_detail_food_carbohidrates"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_detail_food_calorie"
-        android:text="Karbonhidrat:"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
->
-    </TextView>
-    <TextView
-        android:id="@+id/txt_detail_food_protein"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_detail_food_carbohidrates"
-        android:text="Protein:"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        >
-    </TextView>
-    <TextView
-        android:id="@+id/txt_detail_food_fat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_detail_food_protein"
-        android:text="Yağ:"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        >
-    </TextView>
+        </TextView>
+
+        <TextView
+            android:id="@+id/txt_detail_food_calorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_detail_food_name"
+            android:layout_centerHorizontal="true"
+            android:text="@{selectedFood.kalori}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_detail_food_carbohidrates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_detail_food_calorie"
+            android:layout_centerHorizontal="true"
+            android:text="@{selectedFood.karbonhidrat}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_detail_food_protein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_detail_food_carbohidrates"
+            android:layout_centerHorizontal="true"
+            android:text="@{selectedFood.protein}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_detail_food_fat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_detail_food_protein"
+            android:layout_centerHorizontal="true"
+            android:text="@{selectedFood.yag}"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
 
-
-</RelativeLayout>
+    </RelativeLayout>
 </layout>

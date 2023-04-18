@@ -9,7 +9,7 @@ class PrivateSharedPreferences {
 
         companion object {
 
-            private val ZAMAN = "zaman"
+            private val TIME = "time"
             private var sharedPreferences : SharedPreferences? = null
 
 
@@ -29,12 +29,12 @@ class PrivateSharedPreferences {
 
         }
 
-        fun zamaniKaydet(zaman: Long){
+        fun timeToSave(time: Long){
             sharedPreferences?.edit(commit = true){
-                putLong(ZAMAN,zaman)
+                putLong(TIME,time)
             }
         }
 
-        fun zamaniAl() = sharedPreferences?.getLong(ZAMAN,0)
+        fun takeTheTime() = sharedPreferences?.getLong(TIME,0)
 
     }

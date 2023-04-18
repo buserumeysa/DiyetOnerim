@@ -3,49 +3,50 @@ package com.buserkapkiner.diyetonerim.ui.view
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.buserkapkiner.diyetonerim.R
-import com.buserkapkiner.diyetonerim.R.layout.food_recyclerview_row
+import com.buserkapkiner.diyetonerim.databinding.FoodRecyclerviewRowBinding
 import com.buserkapkiner.diyetonerim.ui.model.Food
 
-class FoodAdapter (val foodList :ArrayList<Food>):RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
-    class FoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val txtFoodName: TextView
-        val txtFoodCalorie: TextView
+class FoodAdapter (val foodList :ArrayList<Food>):RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() ,FoodClickListener{
+    class FoodViewHolder(var view: FoodRecyclerviewRowBinding): RecyclerView.ViewHolder(view.root) {
 
-        init {
-            // Define click listener for the ViewHolder's View
-            txtFoodName = itemView.findViewById(R.id.txt_food_name)
-            txtFoodCalorie = itemView.findViewById(R.id.txt_food_calorie)
-        }
+
 
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(food_recyclerview_row,parent,false)
+        //val view = inflater.inflate(food_recyclerview_row,parent,false)
+        val view=DataBindingUtil.inflate<FoodRecyclerviewRowBinding>(inflater,R.layout.food_recyclerview_row,parent,false)
         return FoodViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return foodList.size
-    }
+        return foodList.size }
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
-        holder.txtFoodName.text= foodList[position].toString()
-        holder.txtFoodCalorie.text=foodList[position].toString()
-        holder.itemView.setOnClickListener{
-            val action=FoodListFragmentDirections.actionFoodListFragmentToFoodDetailFragment(0)
-            Navigation.findNavController(it).navigate(action)
+        holder.view.food=foodList[position]
+        holder.view.listener=this
+
         }
-        //holder.itemView.imgFood.pictureInstall(foodList.get(position).foodImage, placeholderCreate(holder.itemView.context))
-    }
+
     fun updateFoodList(newFoodList:List<Food>){
         foodList.clear()
         foodList.addAll(newFoodList)
         notifyDataSetChanged()
+
+    }
+
+    override fun foodClick(view: View) {
+        val uuid = view.food_uuid.text.toString().toIntOrNull()
+        uuid?.let {
+            val action = FoodListFragmentDirections.actionFoodListFragmentToFoodDetailFragment(it)
+            Navigation.findNavController(view).navigate(action)
+
+        }
 
     }
 

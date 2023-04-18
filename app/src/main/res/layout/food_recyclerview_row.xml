@@ -1,56 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="food"
+            type="com.buserkapkiner.diyetonerim.ui.model.Food" />
+        <variable
+            name="listener"
+            type="com.buserkapkiner.diyetonerim.ui.view.FoodClickListener" />
 
+    </data>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:elevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="4dp"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/img_food"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:src="@drawable/besinpiramiti">
-
-        </ImageView>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:onClick="@{listener::foodClick}"
+            android:orientation="horizontal">
             <TextView
-                android:id="@+id/txt_food_name"
+                android:id="@+id/food_uuid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="Besin Adı:"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-
+                android:text="@{String.valueOf(food.uuid)}"
+                android:visibility="gone"
                 >
 
             </TextView>
 
-            <TextView
-                android:id="@+id/txt_food_calorie"
+            <ImageView
+                android:id="@+id/img_food"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:downloadImage="@{food.gorsel}"
+
+                />
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Besin Kalorisi:"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                >
 
-            </TextView>
+                <TextView
+                    android:id="@+id/txt_food_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Besin Adı:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txt_food_calorie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Besin Kalorisi:"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+
         </LinearLayout>
 
-
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </layout>

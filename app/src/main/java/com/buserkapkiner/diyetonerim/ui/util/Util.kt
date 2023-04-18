@@ -2,6 +2,7 @@ package com.buserkapkiner.diyetonerim.ui.util
 
 import android.content.Context
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -18,5 +19,11 @@ fun placeholderCreate(context:Context):CircularProgressDrawable{
         centerRadius=35f
         start()
     }
+
+
+}
+@BindingAdapter("android:downloadImage")
+fun downloadImage(view:ImageView,url: String?){
+    view.pictureInstall(url, placeholderCreate(view.context))
 
 }

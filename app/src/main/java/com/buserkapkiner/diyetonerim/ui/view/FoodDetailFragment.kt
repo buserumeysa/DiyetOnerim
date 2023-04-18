@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,6 +15,7 @@ import com.buserkapkiner.diyetonerim.ui.viewmodel.FoodDetailViewModel
 
 class FoodDetailFragment : Fragment() {
     private lateinit var viewModel: FoodDetailViewModel
+    private lateinit var dataBinding: FragmentFoodDetailBinding
     // View Binding
     private var _binding: FragmentFoodDetailBinding? = null
     private val binding get() = _binding!!
@@ -29,7 +31,8 @@ class FoodDetailFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_food_detail, container, false)
+        dataBinding=DataBindingUtil.inflate(inflater,R.layout.fragment_food_detail,container,false)
+        return dataBinding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,17 +42,23 @@ class FoodDetailFragment : Fragment() {
             println(foodId)
         }
         viewModel=ViewModelProvider(this).get(FoodDetailViewModel::class.java)
-        viewModel.roomGetData()
+        viewModel.roomGetData(foodId)
         observeLiveData()
     }
     fun observeLiveData(){
         viewModel.foodLiveData.observe(viewLifecycleOwner, Observer {food->
             food?.let {
-                binding.txtDetailFoodName.text = it.isim
+                dataBinding.selectedFood=it
+
+
+                /*binding.txtDetailFoodName.text = it.isim
                 binding.txtDetailFoodCalorie.text = it.kalori
                 binding.txtDetailFoodCarbohidrates.text = it.karbonhidrat
                 binding.txtDetailFoodProtein.text = it.protein
                 binding.txtDetailFoodFat.text = it.yag
+                context?.let {
+                    binding.imgDetailFood.pictureInstall(food.gorsel, placeholderCreate(it))
+                }*/
             }
         })
     }
