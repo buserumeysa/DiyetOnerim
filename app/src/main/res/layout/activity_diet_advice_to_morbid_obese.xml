@@ -15,7 +15,7 @@
         android:text="Haftalık Diyet Listesi"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/txt_morbid_obese"
@@ -24,10 +24,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:justificationMode="inter_word"
         android:text="Morbid obezite, ciddi bir sağlık sorunudur ve diyet programı her birey için farklılık gösterebilir.Diyet listesinde özellikle düşük kalorili yiyecekler tercih edilmeli, şeker ve işlenmiş yiyeceklerden uzak durulmalıdır. Bu diyet listesi sadece bir örnek olarak verilmiştir ve morbid obezite tedavisinde diyet programı, bireysel ihtiyaçlara göre uzman bir diyetisyen tarafından hazırlanmalıdır. Bunun yanı sıra, egzersiz programı da mutlaka dahil edilmelidir."      android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 

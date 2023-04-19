@@ -14,7 +14,7 @@
         android:text="Haftalık Diyet Listesi"
         android:textColor="@color/white"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
     <TextView
@@ -27,8 +27,8 @@
         android:justificationMode="inter_word"
         android:text="Önerilen diyet listesinde, her öğün tam buğday, kahverengi pirinç veya bulgur gibi kompleks karbonhidrat kaynakları, protein kaynakları (tavuk, balık, kıyma) ve bol miktarda sebze tüketimi önerilir.Öğün aralarında su tüketimi de önemlidir ve günde en az 2 litre su içmek önerilir. Bu liste fiziksel aktivitelerle desteklenmeli ve egzersiz yapılmalıdır. Egzersiz yapmak, metabolizmayı hızlandırarak kilo verme sürecini hızlandıracaktır."
         android:textAlignment="center"
-        android:textColor="#DADADA"
-        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <ListView

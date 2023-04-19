@@ -15,7 +15,7 @@
         android:text="Haftalık Diyet Listesi"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
     <TextView
@@ -28,8 +28,8 @@
         android:justificationMode="inter_word"
         android:text="Obez bir kişi için önerilen haftalık diyet listesi, sağlıklı beslenmeyi destekleyen ve aynı zamanda kilo kaybına yardımcı olan yiyecekler içermelidir. Ancak kişinin özelliklerine ve sağlık durumuna göre diyet listesi değişebilir. Bu nedenle, bir beslenme uzmanıyla da görüşmeniz önerilir.Bu diyet listesi, özellikle yüksek lif, protein ve sağlıklı yağ içeren yiyeceklerle zenginleştirilmiştir. "
         android:textAlignment="center"
-        android:textColor="#A6A5A5"
-        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <ListView

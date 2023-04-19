@@ -10,6 +10,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.FragmentFoodDetailBinding
+import com.buserkapkiner.diyetonerim.ui.util.pictureInstall
+import com.buserkapkiner.diyetonerim.ui.util.placeholderCreate
 import com.buserkapkiner.diyetonerim.ui.viewmodel.FoodDetailViewModel
 
 
@@ -51,14 +53,14 @@ class FoodDetailFragment : Fragment() {
                 dataBinding.selectedFood=it
 
 
-                /*binding.txtDetailFoodName.text = it.isim
+                binding.txtDetailFoodName.text = it.isim
                 binding.txtDetailFoodCalorie.text = it.kalori
                 binding.txtDetailFoodCarbohidrates.text = it.karbonhidrat
                 binding.txtDetailFoodProtein.text = it.protein
                 binding.txtDetailFoodFat.text = it.yag
                 context?.let {
                     binding.imgDetailFood.pictureInstall(food.gorsel, placeholderCreate(it))
-                }*/
+                }
             }
         })
     }

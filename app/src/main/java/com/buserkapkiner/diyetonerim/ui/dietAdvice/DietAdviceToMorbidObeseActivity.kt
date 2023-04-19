@@ -14,6 +14,7 @@ class DietAdviceToMorbidObeseActivity : AppCompatActivity() {
         dietListViewMorbidObese = findViewById(R.id.diet_list_view_morbid_obese)
 
         val dietItems = arrayOf(
+            "\n",
             "Pazartesi:",
 
             "Kahvaltı: 2 adet haşlanmış yumurta, 1 dilim tam buğday ekmeği, domates ve salatalık",
@@ -21,6 +22,7 @@ class DietAdviceToMorbidObeseActivity : AppCompatActivity() {
             "Öğle: Tavuk göğsü, kahverengi pirinç ve sebzeli salata",
             "Ara öğün: 1 avuç çiğ badem",
             "Akşam: Fırında somon balığı, buharda pişirilmiş sebzeler ve bulgur pilavı",
+            "\n",
             "Salı:",
 
             "Kahvaltı: 1 kase yulaf ezmesi, süt, ceviz ve tarçın",
@@ -28,6 +30,7 @@ class DietAdviceToMorbidObeseActivity : AppCompatActivity() {
             "Öğle: Yeşillikli ton balığı salatası",
             "Ara öğün: 1 avuç çiğ badem",
             "Akşam: Fırında tavuk but, kahverengi pirinç ve sebzeli salata",
+            "\n",
             "Çarşamba:",
 
             "Kahvaltı: 1 dilim tam buğday ekmeği, lor peyniri, domates, salatalık ve yeşil çay",
@@ -35,6 +38,7 @@ class DietAdviceToMorbidObeseActivity : AppCompatActivity() {
             "Öğle: Sebzeli tavuk eti, tam buğday makarna ve sebzeli salata",
             "Ara öğün: 1 adet armut",
             "Akşam: Izgara somon balığı, buharda pişirilmiş sebzeler ve bulgur pilavı",
+            "\n",
             "Perşembe:",
 
             "Kahvaltı: 1 dilim tam buğday ekmeği, 2 dilim hindi füme, domates ve yeşil çay",
@@ -42,6 +46,7 @@ class DietAdviceToMorbidObeseActivity : AppCompatActivity() {
             "Öğle: Nohutlu mercimek çorbası, tam buğday ekmeği ve elma",
             "Ara öğün: 1 avuç çiğ badem",
             "Akşam: Izgara köfte, kahverengi pirinç ve sebzeli salata",
+            "\n",
             "Cuma:",
 
             "Kahvaltı: 1 kase yulaf ezmesi, süt, ceviz ve tarçın",
@@ -49,6 +54,7 @@ class DietAdviceToMorbidObeseActivity : AppCompatActivity() {
             "Öğle: Izgara tavuk göğsü, kahverengi pirinç ve sebzeli salata",
             "Ara öğün: 1 adet portakal",
             "Akşam: Fırında sebzeli tavuk, tam buğday makarna ve sebzeli salata",
+            "\n",
             "Cumartesi:",
 
             "Kahvaltı: 1 dilim tam buğday ekmeği, lor peyniri, domates, salatalık ve yeşil çay",
@@ -57,14 +63,15 @@ class DietAdviceToMorbidObeseActivity : AppCompatActivity() {
             "Ara öğün: 1 adet elma",
             "Akşam: Izgara tavuk, kahverengi pirinç ve sebzeli salata",
 
+            "\n",
             "Pazar:",
 
             "Kahvaltı: 2 adet haşlanmış yumurta, 1 dilim tam buğday ekmeği, domates ve salatalık",
             "Ara öğün: 1 adet armut",
             "Öğle: Fırında sebzeli tavuk, kahverengi pirinç ve sebzeli salata",
             "Ara öğün: 1 avuç çiğ badem",
-            "Akşam: Izgara köfte, kahverengi pirinç ve sebzeli salata"
-
+            "Akşam: Izgara köfte, kahverengi pirinç ve sebzeli salata",
+            "\n"
 
         )
         val adapter = ArrayAdapter(this, R.layout.listview_items, R.id.txt_list, dietItems)

@@ -58,6 +58,7 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
 
 
     }
+
     private fun observeLiveData(){
         viewModel.foods.observe(viewLifecycleOwner, Observer {foods->
             foods?.let {
