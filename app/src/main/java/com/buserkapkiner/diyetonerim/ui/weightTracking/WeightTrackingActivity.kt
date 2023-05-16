@@ -20,6 +20,7 @@ class WeightTrackingActivity : AppCompatActivity() {
             Toast.makeText(this, "Mevcut kilonuz kaydedildi", Toast.LENGTH_SHORT).show()
 
         }
+        setContentView(binding.root)
         binding.btnSaveGoalWeight.setOnClickListener {
           goalWeight = binding.edtTxtGoalWeight.text.toString().toDouble()
             Toast.makeText(this, "Hedef kilonuz kaydedildi", Toast.LENGTH_SHORT).show()
