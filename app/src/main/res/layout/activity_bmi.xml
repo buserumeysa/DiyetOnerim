@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sensor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/constraintcolor"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    tools:context=".ui.bmi.BmiActivity"
+    >
+
+
+
+        <TextView
+            style="@android:style/TextAppearance.Material.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="BEDEN KİTLE İNDEKSİ HESAPLAMA"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BOY"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <NumberPicker
+                android:id="@+id/heightpicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp" />
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cm"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="KİLO"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <NumberPicker
+                android:id="@+id/weightpicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kg"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/resultsTv"
+            style="@android:style/TextAppearance.Material.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            app:srcCompat="@drawable/buttonedit" />
+
+        <TextView
+            android:id="@+id/healthyTv"
+            style="@android:style/TextAppearance.Material.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_bmi_advice_weak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:backgroundTint="@color/white"
+            android:text="Diyet Önerisi"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_bmi_advice_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:backgroundTint="@color/white"
+            android:text="Diyet Önerisi"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_bmi_advice_fat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:backgroundTint="@color/white"
+            android:text="Diyet Önerisi"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_bmi_advice_obese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/red"
+            android:text="Diyet Önerisi"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_bmi_advice_morbid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkRed"
+            android:backgroundTint="@color/white"
+            android:text="Diyet Önerisi"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+
