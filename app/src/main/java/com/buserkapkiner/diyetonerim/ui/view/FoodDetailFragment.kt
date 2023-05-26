@@ -19,14 +19,7 @@ class FoodDetailFragment : Fragment() {
     private lateinit var viewModel: FoodDetailViewModel
     private lateinit var dataBinding: FragmentFoodDetailBinding
     // View Binding
-    private var _binding: FragmentFoodDetailBinding? = null
-    private val binding get() = _binding!!
     private var foodId=0
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,17 +43,20 @@ class FoodDetailFragment : Fragment() {
     fun observeLiveData(){
         viewModel.foodLiveData.observe(viewLifecycleOwner, Observer {food->
             food?.let {
-                dataBinding.selectedFood=it
+                dataBinding.apply {
+                    selectedFood=it
 
 
-                binding.txtDetailFoodName.text = it.isim
-                binding.txtDetailFoodCalorie.text = it.kalori
-                binding.txtDetailFoodCarbohidrates.text = it.karbonhidrat
-                binding.txtDetailFoodProtein.text = it.protein
-                binding.txtDetailFoodFat.text = it.yag
-                context?.let {
-                    binding.imgDetailFood.pictureInstall(food.gorsel, placeholderCreate(it))
+                    txtDetailFoodName.text = it.isim
+                    txtDetailFoodCalorie.text = it.kalori
+                    txtDetailFoodCarbohidrates.text = it.karbonhidrat
+                    txtDetailFoodProtein.text = it.protein
+                    txtDetailFoodFat.text = it.yag
+                    context?.let {
+                        imgDetailFood.pictureInstall(food.gorsel, placeholderCreate(it))
+                    }
                 }
+
             }
         })
     }

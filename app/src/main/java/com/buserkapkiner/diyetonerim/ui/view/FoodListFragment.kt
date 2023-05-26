@@ -20,12 +20,6 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
 
     private var foodRecyclerAdapter= FoodAdapter(arrayListOf())
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
