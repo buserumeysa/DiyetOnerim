@@ -18,5 +18,8 @@ This study aimed to design a mobile application that supports a healthy eating a
 - Retrofit
 - Navigation Component
 - Room
+
+![image](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/0eb7e5ed-06bc-476d-a72c-49eb42e82347)
+
 - Data Binding
 ##Screenshots
