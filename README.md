@@ -24,14 +24,13 @@ This study aimed to design a mobile application that supports a healthy eating a
  ## Screenshots
 
 
-![login](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/fb92b876-4406-4903-a5d4-4cb283305fcc) {:height="100px" width="100px"}.
-![register](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/852d70ca-ca85-47d1-948b-53977b079e28) {:height="100px" width="100px"}.
+![login](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/fb92b876-4406-4903-a5d4-4cb283305fcc) 
+![register](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/852d70ca-ca85-47d1-948b-53977b079e28) 
 ![homepage1](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/da53d77c-0c0f-4a74-af68-79277584a737)
 ![homepage2](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/151ba811-5f75-4110-992c-a119e0cb52c1)
 ![homepage3](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/0536c83c-52dc-4a0b-b5bd-f9cf5bd21ef3)
 ![bki3](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/818aef12-8c09-45ac-a314-da1734c03c58)
 ![bki1](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/78e9694d-d198-4e3d-9730-0f743d40fa7b)
-
 ![diet1](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/6d48be5f-9953-4b18-b192-a6a6cb36c59a)
 ![diet2](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/a50efd6d-8273-472b-b5f2-a7a289d6e390)
 ![diet3](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/5b3e675f-8e3c-4268-8bed-0569e3112f24)
