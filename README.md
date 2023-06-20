@@ -22,9 +22,10 @@ This study aimed to design a mobile application that supports a healthy eating a
 
   
  ## Screenshots
+<img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/fb92b876-4406-4903-a5d4-4cb283305fcc" width="500" height="300" alt="Resim açıklaması">
 
 
-![login](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/fb92b876-4406-4903-a5d4-4cb283305fcc){width=250}
+![login](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/fb92b876-4406-4903-a5d4-4cb283305fcc)
 ![register](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/852d70ca-ca85-47d1-948b-53977b079e28) 
 ![homepage1](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/da53d77c-0c0f-4a74-af68-79277584a737)
 ![homepage2](https://github.com/buserumeysa/DiyetOnerim/assets/110297542/151ba811-5f75-4110-992c-a119e0cb52c1)
