@@ -25,13 +25,19 @@ This study aimed to design a mobile application that supports a healthy eating a
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/fb92b876-4406-4903-a5d4-4cb283305fcc" width="250" height="500" >
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/852d70ca-ca85-47d1-948b-53977b079e28 " width="250" height="500" >
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/da53d77c-0c0f-4a74-af68-79277584a737" width="250" height="500" >
+
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/151ba811-5f75-4110-992c-a119e0cb52c1" width="250" height="500" >
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/0536c83c-52dc-4a0b-b5bd-f9cf5bd21ef3" width="250" height="500" >
-<img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/818aef12-8c09-45ac-a314-da1734c03c58" width="250" height="500" >
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/78e9694d-d198-4e3d-9730-0f743d40fa7b" width="250" height="500" >
+
+<img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/818aef12-8c09-45ac-a314-da1734c03c58" width="250" height="500" >
+<img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/d3b88f08-885d-438f-a3a7-0aa0b641330f" width="250" height="500" >
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/6d48be5f-9953-4b18-b192-a6a6cb36c59a" width="250" height="500" >
+
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/a50efd6d-8273-472b-b5f2-a7a289d6e390" width="250" height="500" >
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/5b3e675f-8e3c-4268-8bed-0569e3112f24" width="250" height="500" >
+<img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/2e168021-a60b-4749-afe5-7e920a126b1f" width="250" height="500" >
+
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/de8dfd33-550b-4602-b452-484a06dd0266" width="250" height="500" >
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/dc84ab65-36e0-43fb-ba18-c3afc6dc3e56" width="250" height="500" >
 <img src="https://github.com/buserumeysa/DiyetOnerim/assets/110297542/ebd6c289-ce9b-4ed0-b482-fcdf47cb3f79" width="250" height="500" >
