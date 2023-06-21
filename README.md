@@ -11,7 +11,7 @@ This study aimed to design a mobile application that supports a healthy eating a
 
 ## Tech Stack
 - Kotlin
-- Firebase
+- Firebase- Auth
 - MVVM
 - Live Data
 - Coroutines
