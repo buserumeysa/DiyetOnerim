@@ -64,7 +64,7 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
         viewModel.foodsErrorMessage.observe(viewLifecycleOwner,Observer{error->
             error?.let {
                 if (it){
-                    binding.txtErrorMessage.visibility=View.VISIBLE
+                    binding.txtErrorMessage.visibility=View.GONE
                     binding.foodListRecyclerView.visibility= View.GONE
                 }
                 else{

@@ -7,23 +7,24 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.ActivityDietBinding
 
-class DietActivity : AppCompatActivity(),DietClickListener
-{   private lateinit var binding: ActivityDietBinding
+class DietActivity : AppCompatActivity(), DietClickListener {
+    private lateinit var binding: ActivityDietBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        binding=ActivityDietBinding.inflate(layoutInflater)
+        binding = ActivityDietBinding.inflate(layoutInflater)
         setContentView(binding.root)
         diets()
-        val dietActivity =this
+        val dietActivity = this
         binding.recyclerviewDiet.apply {
             layoutManager = LinearLayoutManager(applicationContext)
-            adapter= DietAdapter(dietList,dietActivity)
+            adapter = DietAdapter(dietList, dietActivity)
         }
     }
+
     override fun onClick(diet: Diet) {
-        val intent = Intent(applicationContext,DetailActivity::class.java)
-        intent.putExtra(DIET_ID_EXTRA,diet.id)
+        val intent = Intent(applicationContext, DetailActivity::class.java)
+        intent.putExtra(DIET_ID_EXTRA, diet.id)
         startActivity(intent)
     }
 
@@ -43,10 +44,11 @@ class DietActivity : AppCompatActivity(),DietClickListener
         )
         dietList.add(diet2)
 
-            val diet3 = Diet(
-                R.drawable.vegann,
+        val diet3 = Diet(
+            R.drawable.vegann,
             "VEGAN DİYETİ",
-        "Vegan beslenme, bal, süt ürünleri ve yumurta dahil hiçbir hayvansal gıdayı tüketmemek olarak açıklanan bir beslenme şeklidir. Vegan 	beslenmenin temelinde yatan en büyük neden hayvanlara saygıdır. Dolayısıyla vegan olan kişiler hayvansal gıdalardan alacakları besin 	öğelerini bitkisel kaynaklardan ya da diğer gıdalardan alırlar.İlk başta beslenme eksikliği gibi görünsede iyi planlanan ve temiz 	gıda kaynaklarını kullanan vegan  beslenme, oldukça sağlıklı ve insan biyolojisine uygun bir diyettir. Yeşil yapraklı sebzeler 	ağırlıklı olarak tüketilir.Karbonhidrat oranı düşük sebzeler, beslenmeye daha fazla dahil edilir.")
+            "Vegan beslenme, bal, süt ürünleri ve yumurta dahil hiçbir hayvansal gıdayı tüketmemek olarak açıklanan bir beslenme şeklidir. Vegan 	beslenmenin temelinde yatan en büyük neden hayvanlara saygıdır. Dolayısıyla vegan olan kişiler hayvansal gıdalardan alacakları besin 	öğelerini bitkisel kaynaklardan ya da diğer gıdalardan alırlar.İlk başta beslenme eksikliği gibi görünsede iyi planlanan ve temiz 	gıda kaynaklarını kullanan vegan  beslenme, oldukça sağlıklı ve insan biyolojisine uygun bir diyettir. Yeşil yapraklı sebzeler 	ağırlıklı olarak tüketilir.Karbonhidrat oranı düşük sebzeler, beslenmeye daha fazla dahil edilir."
+        )
         dietList.add(diet3)
 
 
@@ -57,12 +59,12 @@ class DietActivity : AppCompatActivity(),DietClickListener
             "Vejetaryen beslenmede diyetin temelinde kırmızı et, kümes hayvanları ve balık gibi hayvan etleri yerine tahıllar, kuru baklagiller, 	soya, sebzeler, meyveler ve yağlı tohumlar gibi bitkisel kaynaklı besinlerin tüketilmesi gelmektedir. Vejetaryen diyet, metabolizma 	için sağlıklı etkiler uyandıran bir diyettir. Başta sindirim sistemi olmak üzere vücudun bir haftalık dinlenme molası vermesi anlamına gelmektedir. Dolayısıyla kilo vermeyi sağlıklı şekilde sağlayabilmek için vejetaryen diyetin tercih edilmesi tavsiye edilmektedir"
 
         )
-                    dietList.add(diet4)
+        dietList.add(diet4)
 
-            val diet5 = Diet(
-                R.drawable.paleo,
-        "PALEO DİYETİ",
-        "Paleo diyeti az veya hiç işlem görmemiş besinleri yemeye odaklı olan bir beslenme planıdır. Paleo Diyeti’nde Bir mağara adamı gibi 	yemek ye ve kilo ver sloganı ile zayıflanabileceği savunulmaktadır. Bu diyet sistemi yüksek protein ve yüksek lif içeriği ile 	kalori kısıtlanmadan kilo verilebileceğini vaat etmektedir. Paleo diyetinin beslenme ilkelerine göre işlenmiş hazır gıdalardan uzak durulmalı, olabildiğince doğal besinler ile beslenilmelidir. Bu beslenme planında tüketilmesi ve tüketilmemesi gereken besin grupları vardır. Protein kaynağı et ve et ürünleri serbest olarak tüketilirken süt ve süt ürünlerinin tüketilmesi yasaktır. Aynı zamanda sebze ve meyve tüketimi serbest iken tahıl grubundan olan besinlerin tüketilememesi gerekir. Paleo diyetinde bir diğer yasaklı besinler üç beyaz olarak adlandırılan tuz, şeker ve undur.  "
+        val diet5 = Diet(
+            R.drawable.paleo,
+            "PALEO DİYETİ",
+            "Paleo diyeti az veya hiç işlem görmemiş besinleri yemeye odaklı olan bir beslenme planıdır. Paleo Diyeti’nde Bir mağara adamı gibi 	yemek ye ve kilo ver sloganı ile zayıflanabileceği savunulmaktadır. Bu diyet sistemi yüksek protein ve yüksek lif içeriği ile 	kalori kısıtlanmadan kilo verilebileceğini vaat etmektedir. Paleo diyetinin beslenme ilkelerine göre işlenmiş hazır gıdalardan uzak durulmalı, olabildiğince doğal besinler ile beslenilmelidir. Bu beslenme planında tüketilmesi ve tüketilmemesi gereken besin grupları vardır. Protein kaynağı et ve et ürünleri serbest olarak tüketilirken süt ve süt ürünlerinin tüketilmesi yasaktır. Aynı zamanda sebze ve meyve tüketimi serbest iken tahıl grubundan olan besinlerin tüketilememesi gerekir. Paleo diyetinde bir diğer yasaklı besinler üç beyaz olarak adlandırılan tuz, şeker ve undur.  "
         )
         dietList.add(diet5)
 
@@ -74,10 +76,7 @@ class DietActivity : AppCompatActivity(),DietClickListener
         dietList.add(diet6)
 
 
-
     }
-
-
 
 
 }
