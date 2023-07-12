@@ -6,9 +6,10 @@ import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.buserkapkiner.diyetonerim.R
 import com.buserkapkiner.diyetonerim.databinding.ActivityMainBinding
 import com.buserkapkiner.diyetonerim.ui.homepage.HomePageActivity
-import com.buserkapkiner.diyetonerim.ui.register.RegisterActivity
+import com.buserkapkiner.diyetonerim.ui.register.RegisterFragment
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -58,9 +60,13 @@ class MainActivity : AppCompatActivity() {
                 binding.edtTxtPassword.transformationMethod = passwordTransformationMethod
             }
         }
+        val registerFragment = RegisterFragment()
+
         binding.btnRegister.setOnClickListener {
-            intent = Intent(applicationContext, RegisterActivity::class.java)
-            startActivity(intent)
+            supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_container, registerFragment,"fragRegister")
+                .addToBackStack("addFragRegister")
+                .commit()
         }
 
 

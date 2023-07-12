@@ -87,14 +87,16 @@
 
     <ImageButton
         android:id="@+id/btnShowPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
+        android:layout_width="28dp"
+        android:layout_height="29dp"
+        android:backgroundTint="@color/white"
         android:src="@drawable/eye"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552" />
+        app:layout_constraintBottom_toBottomOf="@+id/edt_txt_password"
+        app:layout_constraintEnd_toEndOf="@+id/edt_txt_password"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toStartOf="@+id/edt_txt_password"
+        app:layout_constraintTop_toTopOf="@+id/edt_txt_password"
+        app:layout_constraintVertical_bias="0.466" />
 
     <ImageView
         android:id="@+id/img_login"

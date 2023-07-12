@@ -18,7 +18,7 @@
             android:name=".ui.bmi.BmiActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.weightTracking.WeightTrackActivity"
+            android:name=".ui.weightTracking.WeightTrackingActivity"
             android:exported="false" />
         <activity
             android:name=".ui.dietAdvice.DietAdviceToMorbidObeseActivity"
@@ -38,9 +38,7 @@
         <activity
             android:name=".ui.bmi.BodyMossIndexActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.register.RegisterActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.calendar.CalendarActivity"
             android:exported="false" />
@@ -50,12 +48,7 @@
         <activity
             android:name=".ui.diet.DetailActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.calorieCounter.CalorieCounterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.weightTracking.WeightTrackingActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.view.FoodActivity"
             android:exported="false" />
