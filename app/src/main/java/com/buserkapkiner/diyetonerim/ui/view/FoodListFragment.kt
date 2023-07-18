@@ -38,7 +38,7 @@ class FoodListFragment : Fragment(R.layout.fragment_food_list) {
         binding.foodListRecyclerView.adapter =foodRecyclerAdapter
 
         binding.swipeRefreshLayout.setOnRefreshListener{ //sayfayı yenileme
-            //binding.foodListRecyclerView.visibility= View.GONE
+            binding.foodListRecyclerView.visibility= View.GONE
             binding.txtErrorMessage.visibility=View.GONE
             binding.progressBarFragmentFoodList.visibility=View.VISIBLE
             viewModel.refreshFromInternet()
